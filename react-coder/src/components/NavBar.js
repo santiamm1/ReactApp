@@ -1,14 +1,17 @@
+import CarWidget from './CarWidget'
+
 const NavBar = () => {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img src="https://energe.com.ar/wp-content/uploads/2020/04/cropped-Energe-color-300x97.png" width="" height="30" class="d-inline-block align-top"></img></a>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Inicio <span class="sr-only"></span></a>
-                        <a class="nav-item nav-link" href="#">Doméstico</a>
-                        <a class="nav-item nav-link" href="#">Industrial</a>
-                        <a class="nav-item nav-link" href="#">Contacto</a>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <a className="navbar-brand" href="#"><img src="https://energe.com.ar/wp-content/uploads/2020/04/cropped-Energe-color-300x97.png" width="" height="30" className="d-inline-block align-top"></img></a>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav">
+                        <a className="nav-item nav-link active" href="#">Inicio <span className="sr-only"></span></a>
+                        <a className="nav-item nav-link" href="#">Doméstico</a>
+                        <a className="nav-item nav-link" href="#">Industrial</a>
+                        <a className="nav-item nav-link" href="#">Contacto</a>
+                        <CarWidget/>
                     </div>
                 </div>
             </nav>
