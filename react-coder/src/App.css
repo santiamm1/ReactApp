@@ -1,3 +1,10 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .navbar-brand {
   padding-left: 30px;
 }
@@ -14,4 +21,21 @@ li.active {
 li a img {
   margin-top: 40%;
   margin-left: 35%;
+}
+p{
+  width: 100%;
+}
+.ItemList{
+  display: block;
+  width: max-content;
+}
+#countbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: silver;
+  border-radius: 1rem;
+  width: 300px;
+  height: 100px;
 }
