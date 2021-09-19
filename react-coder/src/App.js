@@ -6,8 +6,14 @@ import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount'
 import ItemList from './components/ItemList'
+import ItemDetailContainer from './components/ItemDetailContainer'
 
 const App = () => {
+
+  const message = () => {
+
+  }
+
   return (
     <div>
       <header>
@@ -15,13 +21,11 @@ const App = () => {
       </header>
       <body>
         <div>
-          <ItemListContainer/>
-        </div>
-        <div>
-          <ItemCount/>
-        </div>
-        <div>
+          <ItemListContainer function={() => console.log('En progreso')} label='Página en progreso'/>
+          <ItemListContainer function={() => console.log('En progreso')} label='Aguarde un momento'/>
           <ItemList/>
+          <ItemDetailContainer/>
+          <ItemCount/>
         </div>
       </body>
     </div>
