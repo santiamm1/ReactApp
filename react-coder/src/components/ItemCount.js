@@ -1,4 +1,5 @@
 import React, {Component, useState } from 'react';
+import '../App.css';
 
 const ItemCount = () => {
 
@@ -21,9 +22,9 @@ const ItemCount = () => {
     };
     return(
         <div id="countbox">
-            <h1 clasName= "number" style={{color: "grey"}}>{count}</h1>
             <div id="controller">
                 <button clasName="max" onClick={max}>+</button>
+                <h1 clasName= "number" style={{color: "white"}}>{count}</h1>
                 <button clasName="subtract" onClick={subtract}>-</button>
             </div>
         </div>

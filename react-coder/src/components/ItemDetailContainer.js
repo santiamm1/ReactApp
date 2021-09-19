@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react"
 
 const products = [
-    {detail: '495W', origin: 'Alemania' }
+    {detail: '$210.000', origin: 'Alemania' }
 ]
 
 function getItem() {

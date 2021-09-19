@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react"
 
 const products = [
-    {id:'00', name:'Luxor' , description: '495W', stock: '250' }
+    {id:'00', name:'Luxor 440w' , description: '495W', stock: '250' }
 ]
 
 function getList() {

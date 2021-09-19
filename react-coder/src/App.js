@@ -20,12 +20,23 @@ const App = () => {
         <NavBar/>
       </header>
       <body>
-        <div>
-          <ItemListContainer function={() => console.log('En progreso')} label='Página en progreso'/>
-          <ItemListContainer function={() => console.log('En progreso')} label='Aguarde un momento'/>
-          <ItemList/>
-          <ItemDetailContainer/>
-          <ItemCount/>
+        <div className="card">
+          <img className="card-img-top" src="https://energe.com.ar/wp-content/uploads/2020/10/FV1100-01-01.png" alt="Card image cap"></img>
+          <div className="card-body">
+            <h5 className="card-title">
+              <ItemListContainer function={() => console.log('En progreso')} label='Generador Fotovoltaico'/>
+              <ItemListContainer function={() => console.log('En progreso')} label='Phoenix 1/1100'/>
+            </h5>
+            <p className="card-text">
+              <ItemList/>
+              <ItemDetailContainer/>
+            </p>
+            <a className="btn btn-primary">
+              <ItemCount/>
+            </a>
+            <a className="btn btn-primary buy">Comprar
+            </a>
+          </div>
         </div>
       </body>
     </div>
