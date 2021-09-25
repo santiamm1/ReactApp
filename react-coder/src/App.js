@@ -1,46 +1,55 @@
+import { useState, useEffect} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import { getList } from './getList.jsx';
+import Contact from "./views/Contact/Contact.jsx"
+import Cart from "./views/Cart/Cart.jsx"
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import React, {Component, useState } from 'react';
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount'
-import ItemList from './components/ItemList'
-import ItemDetailContainer from './components/ItemDetailContainer'
+import NavBar from './components/NavBar/NavBar.jsx';
+import ItemListContainer from './components/ItemListContainer/ItemListContainter';
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
-const App = () => {
 
-  const message = () => {
 
-  }
+function App() {
+
+  const [itemList, setItemList] = useState([])
+
+  useEffect(() => {
+        
+    const list = getList()
+
+    list.then(list => {
+        setItemList(list)
+    }, err => console.log(err))
+    .catch((reason) => console.log(reason))
+  }, [])
 
   return (
-    <div>
-      <header>
-        <NavBar/>
-      </header>
-      <body>
-        <div className="card">
-          <img className="card-img-top" src="https://energe.com.ar/wp-content/uploads/2020/10/FV1100-01-01.png" alt="Card image cap"></img>
-          <div className="card-body">
-            <h5 className="card-title">
-              <ItemListContainer function={() => console.log('En progreso')} label='Generador Fotovoltaico'/>
-              <ItemListContainer function={() => console.log('En progreso')} label='Phoenix 1/1100'/>
-            </h5>
-            <p className="card-text">
-              <ItemList/>
-              <ItemDetailContainer/>
-            </p>
-            <a className="btn btn-primary">
-              <ItemCount/>
-            </a>
-            <a className="btn btn-primary buy">Comprar
-            </a>
-          </div>
-        </div>
-      </body>
-    </div>
+    <Router>
+      <NavBar itemList={itemList} />
+      <Switch>
+        <Route exact path="/">
+          <ItemListContainer />
+        </Route>
+        <Route path="/category/:category">
+          <ItemListContainer />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/item/:id">
+          <ItemDetailContainer />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
-export default App
+export default App;

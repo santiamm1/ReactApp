@@ -1,0 +1,61 @@
+.itemCount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    width: 250px;
+    height: 100px;
+
+    &__buttons{
+        display: flex;
+
+        & button{
+            border: none;
+            color: #ffffff;
+            border-radius: 0,9px;
+            font-size: 1.25rem;
+            font-weight: bolder;
+            width: 30px;
+            height: 30px;
+            background-color: #F39200;
+
+            &:hover:enabled{
+                background-color: white;
+                transform: scale(1.05);
+                transition: ease-in-out all 200ms;
+                color: rgb(117, 128, 143);
+            }
+
+            &:disabled{
+                background-color: rgb(197, 201, 206);
+                cursor: default;
+            }
+        }
+
+        & p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+        }
+    }
+
+    .stock{
+        color: rgb(163, 163, 163);
+    }
+
+    .addToCart-btn{
+        border: none;
+        border-radius: 0,9px;
+        color: #ffffff;
+        background-color: #F39200;
+        padding: 10px;
+        font-weight: bold;
+
+        &:hover{
+            transform: scale(1.02);
+            transition: all 250ms;
+        }
+    }
+}

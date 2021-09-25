@@ -1,0 +1,46 @@
+.itemDetail{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    .title{
+        display: flex;
+        flex-direction: column;
+        color: #444444;
+    }
+    main{
+        img{
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+        }
+        .details{
+            display: flex;
+            flex-direction: column;
+            .description{
+                display: flex;
+                flex-direction: column;
+                font-size: 1.2rem;
+                color: #444444;
+            }
+            .price{
+                display: flex;
+                flex-direction: column;
+                color: #F39200 ;
+                font-weight: bold;
+                font-size: 2rem;
+            }
+        }
+
+    }
+    footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .itemCount{
+            width: 90%;
+            padding-block: 25px;
+        }
+    }
+
+}
