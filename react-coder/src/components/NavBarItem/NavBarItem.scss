@@ -1,7 +1,10 @@
 .navbar__item{
     border: none;
     background-color: transparent;
-    color: rgba(114, 114, 114, 0.884);
+    color: #444444;
     font-size: 1rem;
     padding: 5px 10px;
+    &:hover:enabled{
+        color:#F39200;
+    }
 }

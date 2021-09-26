@@ -15,7 +15,7 @@
         display: flex;
         height: 50px;
         width: 50px;
-        color: rgb(101, 112, 124);
+        color: #F39200;
     }
 }
 
@@ -23,4 +23,4 @@
 @keyframes rotation {
     0%   {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
-  }
+}

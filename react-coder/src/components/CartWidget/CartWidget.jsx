@@ -1,8 +1,8 @@
 import "./CartWidget.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingBag, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
-const cartIcon = <FontAwesomeIcon icon={faShoppingCart} />
+const cartIcon = <FontAwesomeIcon icon={faShoppingBag} />
 
 
 const CartWidget = () => {
@@ -10,5 +10,5 @@ const CartWidget = () => {
         <button className="navbar__item navbar__cartIcon">{cartIcon}</button>
     );
 }
- 
+
 export default CartWidget;

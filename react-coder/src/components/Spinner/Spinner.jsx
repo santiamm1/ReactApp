@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faSun } from '@fortawesome/free-solid-svg-icons'
 import "./Spinner.scss"
 
-const spinnerIcon = <FontAwesomeIcon icon={faCircleNotch} />
+const spinnerIcon = <FontAwesomeIcon icon={faSun} />
 
 const Spinner = () => {
     return (
@@ -11,5 +11,5 @@ const Spinner = () => {
         </div>
     );
 }
- 
+
 export default Spinner;

@@ -19,7 +19,7 @@ function App() {
   const [itemList, setItemList] = useState([])
 
   useEffect(() => {
-        
+
     const list = getList()
 
     list.then(list => {
@@ -49,7 +49,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-  )
+  );
 }
 
 export default App;
